@@ -50,4 +50,4 @@ Ei es el error. Si hacemos el cáculo con esa formula, podemos extraer ese error
 95.3688 - (1.0872 x 100.2)= -13,568 Siendo este resultado el error. Si ahora resto esto al numero de cuentas que se corresponde en la realidad a 100.2 km. O sea 2 - 13,568 = -11,568 lo que significa que el modelo está subestimando la realidad, porque da un valor negativo, un valor mucho menor a la realidad.
 
 ##Funcion de coste: error cuadratico medio
-La recta de regresion trata de unificar los puntos x,y dentro de una recta comin procurando generar el menor margen de error posible. No obstante, todos esos puntos van a presentar cierto margen de error (o distancia) con respecto la recta
+La recta de regresion trata de unificar los puntos x,y dentro de una recta comin procurando generar el menor margen de error posible. No obstante, todos esos puntos van a presentar cierto margen de error (o distancia) con respecto la recta.
