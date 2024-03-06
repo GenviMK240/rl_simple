@@ -1,19 +1,42 @@
 ---
-title: "Untitled"
+title: "REGRESIÓN LINEAL SIMPLE"
 output: html_document
 date: "2024-03-06"
+author: "Genoveva Serrano Fernández"
 ---
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
+#Creamos el data frame de la tabla
 ```{r echo=TRUE}
-
-library(kableExtra)
-
-
-
+x_distancia <- c(1.1,100.2, 90.3, 5.4, 57.5, 6.6, 34.7, 65.8, 57.9, 86.1)
+y_cuentas <- c(110,2,6,98,40,94,31,5,8,10)
+xy <- y_cuentas * x_distancia
+x_cuadrado <- x_distancia^2
+tabla_datos <- data.frame (x_distancia, y_cuentas, xy, x_cuadrado)
+kbl(tabla_datos) %>%
+kable_minimal()
 
 ```
+
+```{r echo=TRUE}
+#Sumamos las 4 columnas
+sumatorio_columnas <- colSums (tabla_datos[ , 1:4])
+sumatorio_columnas
+```
+#Añadimos esos valores como 1 fila al data frame
+#Creamos primero un data frame con los nuevos valores
+```{r echo=TRUE}
+totales_sumatorios <-data.frame(x_distancia =c(505.6), y_cuentas =c(404.00), xy =c(7041.70), x_cuadrado =c(37873.66))
+
+##Para luego añadirselos como fila al data frame sumatorio_columnas_df
+
+sumatorio_columnas_df <-rbind(tabla_datos,totales_sumatorios)
+kbl(sumatorio_columnas_df) %>%
+  kable_minimal() %>%
+  row_spec(nrow(sumatorio_columnas_df), bold = TRUE, color = "pink", background = "purple")
+```
+
 
